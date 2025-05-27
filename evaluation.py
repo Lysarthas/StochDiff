@@ -48,22 +48,6 @@ if __name__ == '__main__':
     sample_time = args.sample_time
 
     test_set = load_dataset(args.data_name, window_size, time_dim, pred_length, scale_sty='stand', training=False)
-    # if args.data_name == 'weather':
-    #     _, s1, s2, _ = np.linspace(0, len(test_set), 4).astype(int)
-    #     if args.slice == 1:
-    #         test_set = test_set[:s1]
-    #     elif args.slice == 2:
-    #         test_set = test_set[s1:s2]
-    #     else:
-    #         test_set = test_set[s2:]
-    #     logger.info(f"Data loaded, {int(len(test_set)/128)} batches in total slice {args.slice}")
-    # trainloader = DataLoader(train_set, batch_size=64, shuffle=False)
-    # spec_test = []
-    # idx = -1
-    # for i in range(7):
-    #     spec_test.append(test_set[idx])
-    #     idx -= pred_length
-    # tgt_sum = np.sum(np.sum(np.abs(spec_test), axis=0), axis=-1)
     testloader = DataLoader(test_set, batch_size=128, shuffle=False)
 
     x_dim = test_set[0].shape[-1] - time_dim
