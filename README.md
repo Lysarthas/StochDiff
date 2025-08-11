@@ -8,7 +8,7 @@ An implementation of "[**Stochastic Diffusion: A Diffusion Based Model for Stoch
 
 # Instructions:
 
-Jupyternote book "*stochdiff* provides an instruction to run the model and make forecasting on the Cochlear patient data.
+Jupyternote book *stochdiff* provides an instruction to run the model and make forecasting on the Cochlear patient data.
 
 You can train the model with your own datasets with the *train.py*.
 
